@@ -30,7 +30,4 @@ cmake -DPYTHIA6_LIBRARY=$workdir/programs/root/lib/libPythia6.so -Dpyhia6=ON $wo
 make -j12
 cd $workdir/nuwro
 source $workdir/programs/root/bin/thisroot.sh
-source $workdir/programs/root/bin/thisroot.sh
-source $workdir/programs/root/bin/thisroot.sh
-source $workdir/programs/root/bin/thisroot.sh
 make
