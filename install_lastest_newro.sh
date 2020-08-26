@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 workdir=$(pwd)
 cd $workdir
-git clone https://github.com/NuWro/nuwro.git
+## The next repo correspond to the latest release of Nuwro, forked from @DmitryZhuridov on 25/08/2020
+git clone https://github.com/gapalacic/nuwro-1.git
 mkdir install
 cd $workdir/install
 #dowload pythia6 sources
