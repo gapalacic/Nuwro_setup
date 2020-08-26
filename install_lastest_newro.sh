@@ -29,6 +29,6 @@ cd $workdir/programs/root/
 cmake -DPYTHIA6_LIBRARY=$workdir/programs/root/lib/libPythia6.so -Dpyhia6=ON $workdir/install/root-6.16.00
 #make it
 make -j12
-cd $workdir/nuwro
+cd $workdir/nuwro-1
 source $workdir/programs/root/bin/thisroot.sh ## Execute the last two lines manually
 make
