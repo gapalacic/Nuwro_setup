@@ -15,8 +15,11 @@ sed -i 's/g77/gfortran/g' ./makePythia6.linux
 bash ./makePythia6.linux
 #download ROOT sources
 cd $workdir/install
-wget https://root.cern/download/root_v6.16.00.source.tar.gz
-tar zxf root_v6.16.00.source.tar.gz
+#wget https://root.cern/download/root_v6.16.00.source.tar.gz
+#tar zxf root_v6.16.00.source.tar.gz
+###
+wget https://root.cern/download/root_v6.22.06.source.tar.gz
+tar zxf root_v6.22.06.source.tar.gz
 cd $workdir
 #create build directory
 mkdir $workdir/programs
@@ -26,7 +29,8 @@ mkdir $workdir/programs/root/lib
 cp $workdir/install/pythia6/libPythia6.so  $workdir/programs/root/lib
 cd $workdir/programs/root/
 #cmake ROOT with PYTHIA6 enabled
-cmake -DPYTHIA6_LIBRARY=$workdir/programs/root/lib/libPythia6.so -Dpyhia6=ON $workdir/install/root-6.16.00
+#cmake -DPYTHIA6_LIBRARY=$workdir/programs/root/lib/libPythia6.so -Dpyhia6=ON $workdir/install/root-6.16.00
+cmake -DPYTHIA6_LIBRARY=$workdir/programs/root/lib/libPythia6.so -Dpyhia6=ON $workdir/install/root-6.22.06
 #make it
 make -j2
 cd $workdir/nuwro-1
